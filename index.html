@@ -9,7 +9,41 @@
     <title>Can I Watch It?</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <header>
+        <h1 class="center-align">Can I Watch It?</h1>
+    </header>
+
+    <!-- Input for Movie Search -->
+
+    <section class="container">
+        <div class="row container">
+               <div class="col s12">
+                   <form action="" class="form-group">
+                    <label for="movieSearch"></label>
+                       <input type="search" placeholder="Enter a Movie Title" class="form-control" id="citySearch">
+                       <div class="d-grid gap-2 my-3">
+                           <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
+                       </div>
+                   </form>
+            </div>
+        </div>
+    </section>
+
+<!-- Search Results returned, linked from Streaming Availability API -->
+    <section class="row container">
+        <div class="col s12">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"> Title</span>
+              <p>Data can populate into the card here - maybe a brief description?  Could also have an image (Movie poster, etc?) </p>
+            </div>
+            <div class="card-action">
+              <a href="#" class="waves-effect waves-light btn">Link 1</a>
+              <a href="#" class="waves-effect waves-light btn">Link 2</a>
+            </div>
+          </div>
+        </div>
+    </section>
 
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
