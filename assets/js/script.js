@@ -1,7 +1,7 @@
 var Kara = "9bc319ba34mshdb0c70c64984539p15f5efjsn8aa923a6ee36";
 var Giovanna = "87d84436d1mshb6b0d209ecb39b5p1ec3d4jsn7e6c7183a483";
 var Daniel = "343b570cfbmsh84ada70a77fa889p16e201jsn1f05562634fe";
-var Troy = ""
+var Troy = "b1f2194ce2msh8465b3fd1005b7ap1448f4jsn54d8bc2cedb5"
 
 var searchBar;
 
@@ -12,7 +12,7 @@ var movieCard = $("#movieInfoResults")
 
 // Assigning IDs to variables
 
-let movieResult = $('#movie-result');
+// let movieResult = $('#movie-result');
 
 let searchTitle = $('#searchBar');
 
@@ -23,13 +23,14 @@ let searchBtn = $('#searchBtn');
 
 
 function getInfo (title, synopsis) {
+    movieCard.empty()
   let cardContainer = $('<div>').addClass('movie-card');
 
   let movieInfo = $('<div>').addClass('movie-info');
 
   let movieTitle = $('<h3>').addClass('movie-title').text(title);
 
-  movieInfo.append(movieTitle);
+//   movieInfo.append(movieTitle);
 
   let movieSummary = $('<div>').addClass('movie-summary');
 
@@ -38,12 +39,12 @@ function getInfo (title, synopsis) {
 //   let movieImg = $('<img>').addClass('card-img').attr("src", poster);
 
 //   movieSummary.append(movieImg);
-  movieSummary.append(movieSynopsis);
-  movieTitle.append(movieSummary);
-  movieInfo.append(movieTitle);
+//   movieSummary.append(movieSynopsis);
+//   movieTitle.append(movieSummary);
+  movieInfo.append(movieTitle).append(movieSynopsis);
   cardContainer.append(movieInfo);
-  movieResult.append(cardContainer);
-  movieCard.append(movieResult);
+  movieCard.append(cardContainer);
+//   movieResult.appendTo(movieCard);
 
 }
 
@@ -74,8 +75,8 @@ function getInfo (title, synopsis) {
         },
       }).done(function (response) {
       var searchResults = JSON.parse(response);
-      console.log(searchResults.results);
-      getInfo(searchResults.results.title, searchResults.results.overview)
+      console.log(searchResults.results[0].title);
+      getInfo(searchResults.results[0].title, searchResults.results[0].overview)
     });
   });
 // });
