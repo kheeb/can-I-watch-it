@@ -1,2 +1,3 @@
-# can-I-watch-it
-a simple way to see what subscription services offer the movie you want
+# Can-I-Watch-It
+
+A simple way to see what subscription services offer the movie you want!
