@@ -1,128 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Can I Watch It?</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="center-align">Can I Watch It?</h1>
+      <h1 class="center-align">Can I Watch It?</h1>
     </header>
+
+        <!-- Select Menu with choices to determine what streaming services you would like to choose -->
+        <section class="row container">
+          <div class="col s12">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title"> Select Your Service From the Options Below</span>
+              </div>
+              <div class="card-action">
+                  <select class="browser-default" id="provider">
+                      <option value="" disabled selected>Choose Your Provider</option>
+                      <option value="netflix">Netflix</option>
+                      <option value="disney">Disney+</option>
+                      <option value="prime">Amazon Prime</option>
+                      <option value="hbo">HBO Max</option>
+                      <option value="paramount">Paramount+</option>
+                      <option value="apple">Apple TV</option>
+                      <option value="hulu">Hulu</option>
+                      <option value="starz">Starz</option>
+                      <option value="showtime">Showtime</option>
+                      <option value="peacock">Peacock</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
     <!-- Input for Movie Search -->
 
     <section class="container">
-        <div class="row container">
-               <div class="col s12 card blue-grey darken-1">
-                   <form action="" class="form-group">
-                    <label for="movieSearch"></label>
-                       <input type="search" placeholder="Enter a Movie Title" class="form-control white-text" id="searchBar">
-                       <div class="card-action">
-                           <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
-                       </div>
-                   </form>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Input with switches to determine what streaming services you would like to choose -->
-    <section class="container row blue-grey darken-1 valign-wrapper white-text" id="streaming-service">
-        <div>
-            <h5></h5>
-        </div>
-        <form action="#">
-            <p class="col">
-              <label>
-                <input type="checkbox" />
-                <span class="white-text">Netflix</span>
-              </label>
-            </p>
-            
-        <form action="#">
-            <p class="col white-text">
-                <label>
-                <input type="checkbox" />
-                <span class="white-text">Prime Video</span>
-                </label>
-            </p>
-
-        <form action="#">
-            <p class="col">
-                <label>
-                <input type="checkbox" />
-                <span class="white-text">Hulu</span>
-                </label>
-            </p>
-
-        <form action="#">
-            <p class="col">
-                <label>
-                <input type="checkbox" />
-                <span class="white-text">Disney+</span>
-                </label>
-            </p>
-
-        <form action="#">
-            <p class="col white-text">
-                <label>
-                <input type="checkbox" />
-                <span class="white-text">Showtime</span>
-                </label>
-            </p>
-
-        <form action="#">
-            <p class="col">
-                <label>
-                <input type="checkbox" />
-                <span class="white-text">Apple TV</span>
-                </label>
-            </p>
-
-        <form action="#">
-            <p class="col">
-                <label>
-                <input type="checkbox" />
-                <span class="white-text">Paramount+</span>
-                </label>
-            </p>
-
-        <form action="#">
-            <p class="col white-text">
-                <label>
-                <input type="checkbox" />
-                <span class="white-text">Peacock</span>
-                </label>
-            </p>
-
-    </section>
-
-
-     
-<!-- Search Results returned, linked from Streaming Availability API -->
-    <section class="row container">
-        <div class="col s12">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text" id="movieInfoResults">
-              <span class="card-title"> Title</span>
-              <p>Data can populate into the card here - maybe a brief description?  Could also have an image (Movie poster, etc?) </p>
-            </div>
+      <div class="row container">
+        <div class="col s12 card blue-grey darken-1">
+          <form action="" class="form-group">
+            <label for="movieSearch"></label>
+            <input
+              type="search"
+              placeholder="Enter a Movie Title"
+              class="form-control white-text"
+              id="searchBar"
+            />
             <div class="card-action">
-              <a href="#" class="waves-effect waves-light btn">Link 1</a>
-              <a href="#" class="waves-effect waves-light btn">Link 2</a>
+              <button type="button" class="btn btn-primary" id="searchBtn">
+                Search
+              </button>
             </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Search Results returned, linked from Streaming Availability API -->
+    <section class="row container">
+      <div class="col s12">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text" id="movieInfoResults">
+            <span class="card-title"> Title</span>
+            <p>
+              Data can populate into the card here - maybe a brief description?
+              Could also have an image (Movie poster, etc?)
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="#" class="waves-effect waves-light btn">Link 1</a>
+            <a href="#" class="waves-effect waves-light btn">Link 2</a>
           </div>
         </div>
+      </div>
     </section>
 
     <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
