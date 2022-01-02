@@ -1,7 +1,17 @@
+body {
+    background-color: #546e7a;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+}
+
 .movie-Poster {
     max-height: 350px;
     margin-top: 6px;
 }
 .movie-Info {
    max-width: 750px;
+}
+
+#streaming-service {
+    box-shadow: .5px .5px 1px 1px #384b53e7;
 }
