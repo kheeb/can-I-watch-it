@@ -82,7 +82,7 @@ function getInfo (title, synopsis) {
 
 
     
-}
+};
 
 // $(document).ready(function () {
  styling
