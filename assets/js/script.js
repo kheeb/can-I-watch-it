@@ -189,3 +189,5 @@ $.ajax({
 // });
 
 // Figure out LocalStorage
+
+// Modal alerts
