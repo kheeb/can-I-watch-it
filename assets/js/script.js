@@ -52,7 +52,7 @@ function getInfo(title, synopsis) {
 
 
     
-}
+};
 
 // $(document).ready(function () {
 $("#searchBtn").click(function (event) {
