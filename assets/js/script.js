@@ -117,3 +117,5 @@ $("#searchBtn").click(function (event) {
 // });
 
 // Figure out LocalStorage
+
+// Modal alerts
