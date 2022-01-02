@@ -23,6 +23,11 @@ let searchBtn = $("#searchBtn");
 
 function getInfo(title, synopsis) {
   movieCard.empty();
+
+  // This hides the movie synopsis card until a title is searched
+  let movieDescription = document.getElementById("movieDescription");
+  movieDescription.style.display = "block";
+
   let cardContainer = $("<div>").addClass("movie-card");
 
   let movieInfo = $("<div>").addClass("movie-info");
@@ -44,6 +49,9 @@ function getInfo(title, synopsis) {
   cardContainer.append(movieInfo);
   movieCard.append(cardContainer);
   //   movieResult.appendTo(movieCard);
+
+
+    
 }
 
 // $(document).ready(function () {
@@ -51,11 +59,7 @@ $("#searchBtn").click(function (event) {
   event.preventDefault();
   searchBar = $("#searchBar").val();
   console.log(searchBar);
-  // settings.url = "https://streaming-availability.p.rapidapi.com/search/basic?country=us&service=" +
-  // service +
-  // "&type=movie&page=1&title=" +
-  // searchBar+
-  // "&output_language=en&language=en"
+
   $.ajax({
     async: true,
     crossDomain: true,
@@ -73,7 +77,30 @@ $("#searchBtn").click(function (event) {
     },
   }).done(function (response) {
     var searchResults = JSON.parse(response);
+
+    // This section needs work!!!  I essentially am trying to get a modal to pop up if no title is found
+    if (searchResults.results[0].title === undefined)
+    function custom_alert( message, title ) {
+      
+          title = 'Alert';
+    
+      if ( !message )
+          message = 'No Message to Display.';
+    
+      $('<div></div>').html( message ).dialog({
+          title: title,
+          resizable: false,
+          modal: true,
+          buttons: {
+              'Ok': function()  {
+                  $( this ).dialog( 'close' );
+              }
+          }
+      });
+    }
+
     console.log(searchResults.results[0].title);
+    console.log(searchResults);
     getInfo(searchResults.results[0].title, searchResults.results[0].overview);
   });
 
@@ -88,3 +115,5 @@ $("#searchBtn").click(function (event) {
   });
 });
 // });
+
+
