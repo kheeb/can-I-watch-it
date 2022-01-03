@@ -6,4 +6,10 @@
   max-width: 750px;
 }
 
+.container {
+  align-items: center;
+  display: flex;
+  margin: auto;
+
+}
 /* Could possibly use parallax in Materialize to help style */

@@ -59,6 +59,12 @@ $("#searchBtn").click(function (event) {
   event.preventDefault();
   searchBar = $("#searchBar").val();
   console.log(searchBar);
+  
+ // Setting up LocalStorage within function
+  localStorage.setItem("movie", searchBar);
+  let myMovie = localStorage.getItem("movie");
+  
+  console.log(myMovie)
 
   $.ajax({
     async: true,
@@ -73,7 +79,7 @@ $("#searchBtn").click(function (event) {
     method: "GET",
     headers: {
       "x-rapidapi-host": "streaming-availability.p.rapidapi.com",
-      "x-rapidapi-key": "343b570cfbmsh84ada70a77fa889p16e201jsn1f05562634fe",
+      "x-rapidapi-key": "9bc319ba34mshdb0c70c64984539p15f5efjsn8aa923a6ee36",
     },
   }).done(function (response) {
     var searchResults = JSON.parse(response);
@@ -99,9 +105,11 @@ $("#searchBtn").click(function (event) {
       });
     }
 
+    
     console.log(searchResults.results[0].title);
     console.log(searchResults);
     getInfo(searchResults.results[0].title, searchResults.results[0].overview);
+
   });
 
   $.ajax({
@@ -119,3 +127,5 @@ $("#searchBtn").click(function (event) {
 // Figure out LocalStorage
 
 // Modal alerts
+
+
