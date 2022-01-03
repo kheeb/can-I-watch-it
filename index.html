@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to framework & fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Can I Watch It?</title>
   </head>
   <body>
+  <!-- Insert parallax img -->
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="./assets/images/pexels-nathan-engel-436413.jpeg" alt="">
+    </div>
+  </div>
     <header>
       <h1 class="center-align">Can I Watch It?</h1>
     </header>
@@ -19,7 +27,7 @@
         <!-- Select Menu with choices to determine what streaming services you would like to choose -->
         <section class="row container">
           <div class="col s12">
-            <div class="card blue-grey darken-1">
+            <div class="card purple darken-4">
               <div class="card-content white-text">
                 <span class="card-title"> Select Your Service From the Options Below</span>
               </div>
@@ -44,10 +52,9 @@
 
 
     <!-- Input for Movie Search -->
-
     <section class="container">
       <div class="row container">
-        <div class="col s12 card blue-grey darken-1">
+        <div class="col s12 card purple darken-4">
           <form action="" class="form-group">
             <label for="movieSearch"></label>
             <input
@@ -66,14 +73,10 @@
       </div>
     </section>
 
-
-
-
 <!-- Search Results returned, linked from Streaming Availability API -->
-<section class="row movie-Info container">
-  
+<section class="row movie-Info">
   <div class="col s12" id="movieDescription" style="display:none">
-    <div class="card blue-grey darken-1">
+    <div class="card purple darken-4">
       <div class="card-content white-text" id="movieInfoResults">
         <span class="card-title"> Title</span>
         <p>Data can populate into the card here - maybe a brief description?  Could also have an image (Movie poster, etc?) </p>
@@ -86,7 +89,6 @@
   </div>
 </section>
 
-
 <!--  Movie Poster below synopsis - flexed and centered -->
 <section class="container">
   <!-- Need to figure out how to flex this movie poster above synopsis -->
@@ -94,6 +96,13 @@
     <img class="movie-Poster" id="moviePoster" alt="">
   </div>
 </section>
+
+<!-- Insert parallax img -->
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="./assets/images/pexels-pixabay-33129.jpeg" alt="">
+  </div>
+</div>
 
 
 <!-- Section Hidden for saved Local Storage previous Searched -->
@@ -111,6 +120,13 @@
 src="https://code.jquery.com/jquery-3.6.0.min.js"
 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/js/script.js"></script>
+<!-- Insert function to enable parallax -->
+<script type="text/javascript">
+        $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+</script>
 </body>
 </html>

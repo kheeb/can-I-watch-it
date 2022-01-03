@@ -1,15 +1,45 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #FFE17F;
+}
+
+header {
+  font-family: 'Limelight', cursive;
+  color: #4A148C;
+}
+
+h1 {
+  font-size: 40px;
+}
+
 .movie-Poster {
   max-height: 350px;
   margin-top: 6px;
 }
+
 .movie-Info {
-  max-width: 750px;
+   max-width: 750px;
+}
+
+.parallax-container .parallax img {
+  opacity: 100;
+  max-width: 50px;
+}
+
+#searchBtn {
+  background-color: white;
+  color: black;
 }
 
 .container {
   align-items: center;
   display: flex;
   margin: auto;
-
 }
-/* Could possibly use parallax in Materialize to help style */
+
+footer {
+  font-family: 'Limelight', cursive;
+  color: #4A148C;
+  text-align: center;
+}
+
