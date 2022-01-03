@@ -129,3 +129,16 @@ $("#searchBtn").click(function (event) {
 // Modal alerts
 
 
+// Creating local storage movie options within Footer
+
+//  store value from text area to local storage
+$(".saveBtn").on("click" , function(){
+    var text = $(this).siblings("textarea").val()
+    console.log(text)
+    var rank = $(this).siblings("textarea").attr("id")
+    localStorage.setItem(rank, text)
+})
+// get item from storage to page after refreshing
+$("#option1").val(localStorage.getItem(option1))
+$("#option2").val(localStorage.getItem(option2))
+$("#option3").val(localStorage.getItem(option3))
