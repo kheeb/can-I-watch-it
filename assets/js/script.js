@@ -59,14 +59,12 @@ $("#searchBtn").click(function (event) {
   event.preventDefault();
   searchBar = $("#searchBar").val();
   console.log(searchBar);
-
-  // Setting up LocalStorage within function
+  
+ // Setting up LocalStorage within function
   localStorage.setItem("movie", searchBar);
   let myMovie = localStorage.getItem("movie");
   
   console.log(myMovie)
-
-
 
   $.ajax({
     async: true,
@@ -111,9 +109,6 @@ $("#searchBtn").click(function (event) {
     console.log(searchResults.results[0].title);
     console.log(searchResults);
     getInfo(searchResults.results[0].title, searchResults.results[0].overview);
-
-  
-
 
   });
 
