@@ -1,11 +1,11 @@
 body {
-  font-family: 'Raleway', sans-serif;
-  background-color: #FFE17F;
+  font-family: "Raleway", sans-serif;
+  background-color: #ffe17f;
 }
 
 header {
-  font-family: 'Limelight', cursive;
-  color: #4A148C;
+  font-family: "Limelight", cursive;
+  color: #4a148c;
 }
 
 h1 {
@@ -18,7 +18,7 @@ h1 {
 }
 
 .movie-Info {
-   max-width: 750px;
+  max-width: 750px;
 }
 
 .parallax-container .parallax img {
@@ -38,8 +38,15 @@ h1 {
 }
 
 footer {
-  font-family: 'Limelight', cursive;
-  color: #4A148C;
+  font-family: "Limelight", cursive;
+  color: white;
   text-align: center;
+  align-items: center;
+  
+
 }
 
+.saveBtn {
+  background-color: white;
+  color: black;
+}
