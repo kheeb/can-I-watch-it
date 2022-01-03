@@ -70,12 +70,9 @@
 
 
 <!-- Search Results returned, linked from Streaming Availability API -->
-<section class="row movie-Info">
-  <!-- Need to figure out how to flex this movie poster above synopsis -->
-  <div class="col s4">
-      <img class="movie-Poster" id="moviePoster" alt="">
-  </div>
-  <div class="col s8" id="movieDescription" style="display:none">
+<section class="row movie-Info container">
+  
+  <div class="col s12" id="movieDescription" style="display:none">
     <div class="card blue-grey darken-1">
       <div class="card-content white-text" id="movieInfoResults">
         <span class="card-title"> Title</span>
@@ -87,6 +84,25 @@
       </div>
     </div>
   </div>
+</section>
+
+
+<!--  Movie Poster below synopsis - flexed and centered -->
+<section class="container">
+  <!-- Need to figure out how to flex this movie poster above synopsis -->
+  <div class="row s4">
+    <img class="movie-Poster" id="moviePoster" alt="">
+  </div>
+</section>
+
+
+<!-- Section Hidden for saved Local Storage previous Searched -->
+<section>
+  <footer id="past-searches">
+    <div>
+      <h5>Your Previous Searches</h5>
+    </div>
+  </footer>
 </section>
 
 
