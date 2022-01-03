@@ -1,7 +1,11 @@
 body {
-    background-color: #546e7a;
-    font-family: 'Raleway', sans-serif;
-    color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  background-color: #FFE17F;
+}
+
+header {
+  font-family: 'Limelight', cursive;
+  color: #4A148C;
 }
 
 .movie-Poster {
@@ -12,6 +16,13 @@ body {
    max-width: 750px;
 }
 
-#streaming-service {
-    box-shadow: .5px .5px 1px 1px #384b53e7;
+.parallax-container .parallax img {
+  opacity: 100;
+  max-width: 50px;
 }
+
+#searchBtn {
+  background-color: white;
+  color: black;
+}
+
