@@ -1,3 +1,4 @@
+// API keys
 var streamingKara = "9bc319ba34mshdb0c70c64984539p15f5efjsn8aa923a6ee36";
 var streamingGiovanna = "87d84436d1mshb6b0d209ecb39b5p1ec3d4jsn7e6c7183a483";
 var streamingDaniel = "343b570cfbmsh84ada70a77fa889p16e201jsn1f05562634fe";
@@ -5,15 +6,10 @@ var streamingTroy = "b1f2194ce2msh8465b3fd1005b7ap1448f4jsn54d8bc2cedb5";
 
 var omdbKara = "d1d04aa6";
 
-var searchBar;
-
+// Assigning IDs to variables
 var service = document.querySelector("#provider").value;
 
 var movieCard = $("#movieInfoResults");
-
-// Assigning IDs to variables
-
-// let movieResult = $('#movie-result');
 
 let searchTitle = $("#searchBar");
 
@@ -24,34 +20,25 @@ let searchBtn = $("#searchBtn");
 function getInfo(title, synopsis) {
   movieCard.empty();
 
-  // This hides the movie synopsis card until a title is searched
+// This hides the movie synopsis card until a title is searched
   let movieDescription = document.getElementById("movieDescription");
   movieDescription.style.display = "block";
 
+// shows information and title
+  
   let cardContainer = $("<div>").addClass("movie-card");
 
   let movieInfo = $("<div>").addClass("movie-info");
 
   let movieTitle = $("<h3>").addClass("movie-title").text(title);
 
-  //   movieInfo.append(movieTitle);
-
   let movieSummary = $("<div>").addClass("movie-summary");
 
   let movieSynopsis = $("<p>").addClass("movie-synopsis").text(synopsis);
 
-  //   let movieImg = $('<img>').addClass('card-img').attr("src", poster);
-
-  //   movieSummary.append(movieImg);
-  //   movieSummary.append(movieSynopsis);
-  //   movieTitle.append(movieSummary);
   movieInfo.append(movieTitle).append(movieSynopsis);
   cardContainer.append(movieInfo);
   movieCard.append(cardContainer);
-  //   movieResult.appendTo(movieCard);
-
-
-    
 }
 
 // $(document).ready(function () {
@@ -84,7 +71,6 @@ $("#searchBtn").click(function (event) {
   }).done(function (response) {
     var searchResults = JSON.parse(response);
 
-    // This section needs work!!!  I essentially am trying to get a modal to pop up if no title is found
     if (searchResults.results[0].title === undefined)
     function custom_alert( message, title ) {
       
@@ -104,7 +90,6 @@ $("#searchBtn").click(function (event) {
           }
       });
     }
-
     
     console.log(searchResults.results[0].title);
     console.log(searchResults);
@@ -123,11 +108,6 @@ $("#searchBtn").click(function (event) {
   });
 });
 // });
-
-// Figure out LocalStorage
-
-// Modal alerts
-
 
 // Creating local storage movie options within Footer
 
